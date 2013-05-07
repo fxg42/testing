@@ -1,13 +1,13 @@
-#-= require vendor/mocha
-#-= require vendor/expect
-
 #-= require ../src/Hello
 
-describe 'HelloSpec', ->
-  before ->
-    # setup stuff....
+App = (@App ?= {})
 
-  describe 'some method', ->
+describe 'HelloSpec', ->
+  hello = null
+
+  before ->
+    hello = new App.Hello 'World'
+
+  describe 'goodMorning()', ->
     it 'should say "Good morning"', ->
-      hello = new Hello 'World'
-      (expect hello.goodMorning()).to.be 'Good Morning, World!'
+      hello.goodMorning().should.equal 'Good Morning, World!'

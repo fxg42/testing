@@ -6,9 +6,17 @@ html
   link(rel="stylesheet",href="/stylesheets/mocha.css")
 body
   #mocha
-  != js('test/HelloSpec')
+
+  != js('test/vendor/mocha')
+  != js('test/vendor/chai')
+  script
+    chai.Should();
   script
     mocha.setup('bdd');
+
+  != js('test/HelloSpec')
+
+  script
     mocha.checkLeaks();
     mocha.globals(['jQuery']);
     mocha.run();

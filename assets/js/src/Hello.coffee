@@ -1,4 +1,6 @@
-class Hello
+App = (@App ?= {})
+
+class App.Hello
   constructor: (@whom) ->
 
   goodMorning: ->
