@@ -1,7 +1,5 @@
 #-= require ../src/Hello
 
-App = (@App ?= {})
-
 describe 'HelloSpec', ->
   hello = null
 

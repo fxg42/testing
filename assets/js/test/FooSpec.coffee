@@ -1,7 +1,5 @@
 #-= require ../src/Foo
 
-App = (@App ?= {})
-
 # See http://chaijs.com/api/bdd/ for assertion API details...
 
 describe 'FooSpec', ->
